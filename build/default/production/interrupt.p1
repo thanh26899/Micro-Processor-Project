@@ -1,0 +1,23 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T2 __interrupt ]
+[v F45 `(v ~T0 @X0 1 tf ]
+"84 ./uart.h
+[; ;./uart.h: 84: void __attribute__((inline)) UART_isr(void);
+[v _UART_isr `TF45 ~T0 @X0 0 e ]
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"3 interrupt.c
+[; ;interrupt.c: 3: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T2 @X0 1 ef ]
+"4
+[; ;interrupt.c: 4: {
+{
+[e :U _ISR ]
+[f ]
+"6
+[; ;interrupt.c: 6:         UART_isr();
+[e ( _UART_isr ..  ]
+"11
+[; ;interrupt.c: 11: }
+[e :UE 1 ]
+}
